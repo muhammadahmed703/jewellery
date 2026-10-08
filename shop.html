@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shop — House of Sheikh</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/index.html" class="brand">
+        <div class="brand-mark">S</div>
+        <div class="brand-name">House of Sheikh<small>Jewels &amp; Accessories</small></div>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/shop.html" class="active">Shop</a></li>
+        <li><a href="/shop.html?cat=Adults%20Jewelry">Adults</a></li>
+        <li><a href="/shop.html?cat=Kids%20Jewelry">Kids</a></li>
+        <li><a href="/shop.html?cat=Hair%20Clips%20%26%20Accessories">Accessories</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="cart-btn" onclick="openCart()">🛍<span class="cart-badge" id="cartBadge">0</span></button>
+        <button class="hamburger" id="hamburger">☰</button>
+      </div>
+    </div>
+  </nav>
+
+  <section class="section container" style="padding-top:130px">
+    <div class="sec-head">
+      <div class="eyebrow">The Collection</div>
+      <h2>Our <span class="gold-text">Products</span></h2>
+      <div class="line"></div>
+    </div>
+
+    <div class="toolbar">
+      <input type="text" id="searchBox" placeholder="🔍 Search jewelry, clips..." />
+      <select id="filterCat">
+        <option value="">All Categories</option>
+        <option>Adults Jewelry</option>
+        <option>Kids Jewelry</option>
+        <option>Hair Clips &amp; Accessories</option>
+      </select>
+      <select id="sortBy">
+        <option value="new">Newest First</option>
+        <option value="low">Price: Low → High</option>
+        <option value="high">Price: High → Low</option>
+        <option value="az">Name: A → Z</option>
+      </select>
+      <span class="result-count" id="resultCount"></span>
+    </div>
+
+    <div class="prod-grid" id="shopGrid"></div>
+  </section>
+
+  <footer>
+    <div class="foot-bottom">© 2025 House of Sheikh — Jewels &amp; Accessories. All rights reserved.</div>
+  </footer>
+
+  <div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
+  <aside class="cart-sidebar" id="cartSidebar">
+    <div class="cart-head"><h3>Your Bag 👑</h3><button onclick="closeCart()">✕</button></div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-foot">
+      <div class="cart-total"><span>Subtotal</span><strong id="cartTotal">Rs 0</strong></div>
+      <a href="/checkout.html" class="btn btn-gold w-full">Proceed to Checkout</a>
+    </div>
+  </aside>
+
+  <div class="toast" id="toast"></div>
+  <script src="/js/main.js"></script>
+  <script src="/js/shop.js"></script>
+</body>
+</html>
