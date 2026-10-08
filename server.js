@@ -68,6 +68,9 @@ const requireAdmin = (req, res, next) => {
     return res.status(401).json({ error: 'Unauthorized — admin token missing or invalid' });
   next();
 };
+const path = require('path');
+
+app.use(express.static(path.join(__dirname, 'public')));
 
 
 app.get('/api/products', (req, res) => {
@@ -176,8 +179,14 @@ app.post('/api/admin/login', (req, res) => {
   res.status(401).json({ error: 'Incorrect password' });
 });
 
-app.listen(2000, () => {
-    console.log("Server is running on port 2000");
+// const PORT = process.env.PORT || 3000;
+// app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
+
+
+const PORT = process.env.PORT || 8000;
+app.listen(PORT, () => {
+    console.log(`Server running successfully on: http://localhost:${PORT}`);
 });
 
 
