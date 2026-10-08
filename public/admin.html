@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Panel — House of Sheikh</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="admin-login" id="loginScreen">
+    <div class="login-card">
+      <div class="brand-mark">S</div>
+      <h2>Admin Panel</h2>
+      <p>House of Sheikh — Owner Access Only</p>
+      <form id="loginForm">
+        <input type="password" id="adminPass" placeholder="Enter Admin Password" required />
+        <button type="submit" class="btn btn-gold w-full">🔐 Login to Dashboard</button>
+        <div class="login-err" id="loginErr"></div>
+      </form>
+      <a href="/index.html" style="color:var(--gold-soft);font-size:.85rem">← Back to Website</a>
+    </div>
+  </div>
+
+  <div class="admin-shell container" id="adminShell">
+    <div class="sec-head" style="text-align:left;margin-bottom:36px">
+      <div class="eyebrow">Owner Control</div>
+      <h2 style="color:var(--royal)">Admin <span class="gold-text">Dashboard</span></h2>
+      <div class="line" style="margin-left:0"></div>
+    </div>
+
+    <div class="admin-stats">
+      <div class="stat-card"><span class="ico">📦</span><div class="num" id="statProducts">0</div><div class="lbl">Live Products</div></div>
+      <div class="stat-card"><span class="ico">🧾</span><div class="num" id="statOrders">0</div><div class="lbl">Total Orders</div></div>
+      <div class="stat-card"><span class="ico">💰</span><div class="num" id="statRevenue">Rs 0</div><div class="lbl">Total Revenue</div></div>
+    </div>
+
+    <div class="admin-grid">
+      <div>
+        <div class="admin-panel">
+          <h3>➕ Post New Ad</h3>
+          <form id="postForm">
+            <div class="form-group">
+              <label>Product Title *</label>
+              <input type="text" name="title" placeholder="e.g. Royal Gold Bridal Set" required />
+            </div>
+            <div class="form-group">
+              <label>Category *</label>
+              <select name="category" required>
+                <option value="">— Select Category —</option>
+                <option>Adults Jewelry</option>
+                <option>Kids Jewelry</option>
+                <option>Hair Clips &amp; Accessories</option>
+              </select>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Price (Rs) *</label>
+                <input type="number" name="price" min="1" placeholder="e.g. 12500" required />
+              </div>
+              <div class="form-group">
+                <label>Stock Available *</label>
+                <input type="number" name="stock" min="0" placeholder="e.g. 10" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Description</label>
+              <textarea name="description" rows="4" placeholder="Describe the product..."></textarea>
+            </div>
+            <div class="form-group">
+              <label>Product Images (up to 4)</label>
+              <label class="dropzone" for="imageInput">
+                📸 Click to upload images<br><strong>JPG / PNG / WEBP</strong>
+              </label>
+              <input type="file" id="imageInput" name="images" accept="image/*" multiple hidden />
+              <div class="preview-row" id="previewRow"></div>
+            </div>
+            <button type="submit" class="btn btn-gold w-full">🚀 Publish Ad — Go Live</button>
+          </form>
+        </div>
+      </div>
+
+      <div>
+        <div class="admin-panel">
+          <h3>📦 My Listings</h3>
+          <div class="table-scroll">
+            <table class="admin-table">
+              <thead><tr><th>Image</th><th>Title</th><th>Category</th><th>Price</th><th>Stock</th><th>Action</th></tr></thead>
+              <tbody id="productsBody"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="admin-panel">
+          <h3>🧾 Customer Orders</h3>
+          <div class="table-scroll">
+            <table class="admin-table">
+              <thead><tr><th>Order ID</th><th>Customer</th><th>City</th><th>Total</th><th>Status</th><th>Action</th></tr></thead>
+              <tbody id="ordersBody"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+  <script src="/js/main.js"></script>
+  <script src="/js/admin.js"></script>
+</body>
+</html>

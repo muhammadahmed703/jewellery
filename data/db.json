@@ -1,0 +1,103 @@
+{
+  "nextId": 13,
+  "orders": [
+    {
+      "id": "ORD1791424622129",
+      "name": "muhammadahmedd703",
+      "phone": "0332704212",
+      "address": "house # 22892 gulshan e zia orangi town karachi",
+      "city": "karachi",
+      "items": [
+        {
+          "id": 1,
+          "title": "Royal Gold Bridal Set",
+          "price": 24500,
+          "qty": 1
+        },
+        {
+          "id": 5,
+          "title": "Little Star Bangle Pair",
+          "price": 1200,
+          "qty": 2
+        }
+      ],
+      "total": 26900,
+      "status": "Delivered",
+      "created": 1791424622129
+    }
+  ],
+  "products": [
+    {
+      "id": 7,
+      "title": "Royal Kundan Bridal Set",
+      "category": "Adults Jewelry",
+      "price": 500000,
+      "stock": 10,
+      "description": "Authentic Kundan Craftsmanship: Hand-set, gleaming kundan stones meticulously arranged to create dazzling patterns, echoing ancient royal aesthetics.\r\nLustrous Gold Plated Finish: Adorned with a rich, durable gold plating that mimics the warmth and opulence of pure gold, offering a lavish look without compromise.",
+      "images": [
+        "/uploads/1791425999092-images-(1).jfif"
+      ],
+      "created": 1791425999101
+    },
+    {
+      "id": 8,
+      "title": "Emerald Kundan Choker",
+      "category": "Adults Jewelry",
+      "price": 5000,
+      "stock": 16,
+      "description": "This exquisitely handcrafted choker set includes a necklace and matching earrings, featuring intricate Pachi Kundan work, all set in micron gold plating. The necklace showcases a captivating central pendant, intricately designed with Kundan stones with emerald green beads. The earrings mirror the design elements of the necklace pendant, featuring smaller Kundan settings with delicate pearl or bead drops. Designed to be lightweight and comfortable for extended wear, this set allows you to enjoy your special occasion without any discomfort.",
+      "images": [
+        "/uploads/1791426165894-images-(2).jfif"
+      ],
+      "created": 1791426165903
+    },
+    {
+      "id": 9,
+      "title": "Pearl Drop Earrings",
+      "category": "Adults Jewelry",
+      "price": 3000,
+      "stock": 450,
+      "description": "Introducing the As Fresh As Daisy Earrings - the perfect accessory for adding a touch of elegance to any outfit. With their delicate daisy design and high-quality materials, these earrings are sure to make a statement. Plus, their lightweight construction ensures comfort for all-day wear. Elevate your style with these timeless earrings.",
+      "images": [
+        "/uploads/1791426295328-4_24cbe9df-5c78-490c-b0b0-435bcb8062dc.webp"
+      ],
+      "created": 1791426295341
+    },
+    {
+      "id": 10,
+      "title": "Kids Princess Tiara Set",
+      "category": "Kids Jewelry",
+      "price": 2000,
+      "stock": 100,
+      "description": "Pink Princess Aurora Sleeping Beauty Glinda Mable Good Witch Costume Dress Up Ensemble, Pink Princess Costume Dress for Girls - Sparkling Pink Fairy Tale Dress Up\r\nTransform into a magical princess with the Princess Aurora Costume Crown! This delightful crown features a sparkling metal",
+      "images": [
+        "/uploads/1791426471185-princess_glinda_mable_pose.webp"
+      ],
+      "created": 1791426471202
+    },
+    {
+      "id": 11,
+      "title": "Little Star Bangle Pair",
+      "category": "Kids Jewelry",
+      "price": 5000,
+      "stock": 50,
+      "description": "A classic engravable silver baby bangle, the perfect gift for newborns and Christenings. Suitable for boys and girls. The bangle is adjustable to fit ages newborn to 6 years old and comes with the Little Star jewellery gift box and bag.",
+      "images": [
+        "/uploads/1791426599241-images-(4).jfif"
+      ],
+      "created": 1791426599255
+    },
+    {
+      "id": 12,
+      "title": "Crystal Butterfly Hair Clips (Set of 4)",
+      "category": "Hair Clips & Accessories",
+      "price": 3000,
+      "stock": 30,
+      "description": "Add a cute and stylish touch to your little girl’s look with this 6-piece glitter butterfly hair clips set. Designed with sparkling glitter finish and vibrant colors, these clips are perfect for daily wear, parties, and special occasions.",
+      "images": [
+        "/uploads/1791426704130-images-(5).jfif"
+      ],
+      "created": 1791426704145
+    }
+  ]
+}

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>House of Sheikh — Jewels & Accessories</title>
+  <meta name="description" content="Premium jewelry and accessories. Royal elegance for adults, kids and every occasion." />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/index.html" class="brand">
+        <div class="brand-mark">S</div>
+        <div class="brand-name">House of Sheikh<small>Jewels &amp; Accessories</small></div>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/index.html" class="active">Home</a></li>
+        <li><a href="/shop.html">Shop</a></li>
+        <li><a href="/shop.html?cat=Adults%20Jewelry">Adults</a></li>
+        <li><a href="/shop.html?cat=Kids%20Jewelry">Kids</a></li>
+        <li><a href="/shop.html?cat=Hair%20Clips%20%26%20Accessories">Accessories</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="cart-btn" onclick="openCart()">🛍<span class="cart-badge" id="cartBadge">0</span></button>
+        <button class="hamburger" id="hamburger">☰</button>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero" id="hero">
+    <div class="slide active" style="background-image:url('/image/images.jfif')">
+      <div class="hero-content"><div class="slide-text">
+        <div class="hero-tag">✦ New Season Collection ✦</div>
+        <h1>Timeless <span class="gold-text">Elegance</span>,<br>Crafted for Royalty</h1>
+        <p>Discover handpicked jewelry and accessories that define grace. From bridal treasures to kids' favourites.</p>
+        <a href="/shop.html" class="btn btn-gold">Explore Collection</a>
+      </div></div>
+    </div>
+    <div class="slide" style="background-image:url('/image/images\ \(1\).jfif')">
+      <div class="hero-content"><div class="slide-text">
+        <div class="hero-tag">✦ Bridal Edit ✦</div>
+        <h1>Shine on Your <span class="gold-text">Big Day</span></h1>
+        <p>Exquisite bridal sets with kundan, pearls and gold finishes — made to make moments unforgettable.</p>
+        <a href="/shop.html?cat=Adults%20Jewelry" class="btn btn-gold">Shop Bridal</a>
+      </div></div>
+    </div>
+    <div class="slide" style="background-image:url('/image/images\ \(2\).jfif')">
+      <div class="hero-content"><div class="slide-text">
+        <div class="hero-tag">✦ Little Royalty ✦</div>
+        <h1><span class="gold-text">Kids</span> Collection is Here</h1>
+        <p>Skin-safe, sparkle-packed jewelry and clips designed for your little princesses.</p>
+        <a href="/shop.html?cat=Kids%20Jewelry" class="btn btn-gold">Shop Kids</a>
+      </div></div>
+    </div>
+    <button class="hero-arrow prev" onclick="moveSlide(-1)">‹</button>
+    <button class="hero-arrow next" onclick="moveSlide(1)">›</button>
+    <div class="hero-dots" id="heroDots"></div>
+  </header>
+
+  <section class="section container">
+    <div class="sec-head reveal">
+      <div class="eyebrow">Curated For You</div>
+      <h2>Shop by <span class="gold-text">Category</span></h2>
+      <div class="line"></div>
+    </div>
+    <div class="cat-grid">
+      <a href="/shop.html?cat=Adults%20Jewelry" class="cat-card reveal">
+        <img src="/image/images.jfif" alt="Adults Jewelry" />
+        <div class="cat-info"><h3>Adults Jewelry</h3><span>Necklaces · Earrings · Sets</span><span class="arrow">Shop Now →</span></div>
+      </a>
+      <a href="/shop.html?cat=Kids%20Jewelry" class="cat-card reveal">
+        <img src="/image/images (1).jfif" alt="Kids Jewelry" />
+        <div class="cat-info"><h3>Kids Jewelry</h3><span>Tiaras · Bangles · Gifts</span><span class="arrow">Shop Now →</span></div>
+      </a>
+      <a href="/shop.html?cat=Hair%20Clips%20%26%20Accessories" class="cat-card reveal">
+        <img src="/image/images (2).jfif" alt="Hair Clips & Accessories" />
+        <div class="cat-info"><h3>Hair Clips &amp; Accessories</h3><span>Clips · Pins · Extras</span><span class="arrow">Shop Now →</span></div>
+      </a>
+    </div>
+  </section>
+
+  <section class="section container" style="padding-top:20px">
+    <div class="sec-head reveal">
+      <div class="eyebrow">Handpicked</div>
+      <h2>Featured <span class="gold-text">Pieces</span></h2>
+      <div class="line"></div>
+    </div>
+    <div class="prod-grid" id="featuredGrid"></div>
+    <div style="text-align:center;margin-top:44px" class="reveal">
+      <a href="/shop.html" class="btn btn-dark">View All Products →</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container foot-grid">
+      <div>
+        <div class="brand" style="margin-bottom:16px">
+          <div class="brand-mark">S</div>
+          <div class="brand-name">House of Sheikh<small>Jewels &amp; Accessories</small></div>
+        </div>
+        <p>Premium jewelry and accessories for every generation. Quality you can trust, elegance you can feel.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="/shop.html">All Products</a></li>
+          <li><a href="/checkout.html">Checkout</a></li>
+          <li><a href="/admin.html">Admin Panel</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li>📞 +92 3701939489</li>
+          <li>📍 Karachi, Pakistan</li>
+          <li>✉️ info@houseofsheikh.pk</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">© 2025 House of Sheikh — Jewels &amp; Accessories. All rights reserved.</div>
+  </footer>
+
+  <div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
+  <aside class="cart-sidebar" id="cartSidebar">
+    <div class="cart-head"><h3>Your Bag 👑</h3><button onclick="closeCart()">✕</button></div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-foot">
+      <div class="cart-total"><span>Subtotal</span><strong id="cartTotal">Rs 0</strong></div>
+      <a href="/checkout.html" class="btn btn-gold w-full">Proceed to Checkout</a>
+    </div>
+  </aside>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="/js/main.js"></script>
+  <script src="/js/shop.js"></script>
+</body>
+</html>

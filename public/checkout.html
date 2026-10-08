@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout — House of Sheikh</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/index.html" class="brand">
+        <div class="brand-mark">S</div>
+        <div class="brand-name">House of Sheikh<small>Jewels &amp; Accessories</small></div>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/shop.html" class="active">Shop</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="cart-btn" onclick="openCart()">🛍<span class="cart-badge" id="cartBadge">0</span></button>
+        <button class="hamburger" id="hamburger">☰</button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="success-card" id="successCard" style="display:none">
+    <div class="tick">✓</div>
+    <h2>Order Placed Successfully!</h2>
+    <p>Shukriya! Your order <span class="order-id" id="successOrderId"></span> has been received.<br>
+    Hum jald aap se confirm karne ke liye raabta karenge.</p>
+    <a href="/shop.html" class="btn btn-gold" style="margin-top:24px">Continue Shopping</a>
+  </div>
+
+  <div id="checkoutSection">
+    <div class="container checkout-wrap">
+      <div class="form-card">
+        <h2>Customer Details</h2>
+        <form id="checkoutForm">
+          <div class="form-group">
+            <label>Full Name *</label>
+            <input type="text" name="name" placeholder="e.g. Ayesha Sheikh" required />
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Phone Number *</label>
+              <input type="tel" name="phone" placeholder="03XX-XXXXXXX" required />
+            </div>
+            <div class="form-group">
+              <label>City *</label>
+              <input type="text" name="city" placeholder="e.g. Lahore" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Complete Address *</label>
+            <textarea name="address" rows="3" placeholder="House #, Street, Area..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-gold w-full">Place Order — Cash on Delivery</button>
+        </form>
+      </div>
+
+      <div class="summary-card">
+        <h3>Order Summary</h3>
+        <div id="summaryItems"></div>
+        <div class="sum-row total"><span>Total</span><span id="summaryTotal">Rs 0</span></div>
+        <p style="margin-top:20px;font-size:.82rem;color:rgba(255,255,255,.6)">
+          🔒 Your details are safe. Payment collected on delivery.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="foot-bottom">© 2025 House of Sheikh — Jewels &amp; Accessories. All rights reserved.</div>
+  </footer>
+
+  <div class="toast" id="toast"></div>
+  <script src="/js/main.js"></script>
+  <script src="/js/checkout.js"></script>
+</body>
+</html>
