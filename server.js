@@ -1,11 +1,12 @@
-
 const express = require('express');
 const multer  = require('multer');
 const fs      = require('fs');
 const path    = require('path');
 
 const app  = express();
-const PORT = 3000;
+
+// Port declaration ko upar hi dynamic kar diya hai taaki local aur Vercel dono pe chale
+const PORT = process.env.PORT || 3000;
 
 const DATA_DIR      = path.join(__dirname, 'data');
 const UPLOAD_DIR    = path.join(__dirname, 'uploads');
@@ -54,7 +55,7 @@ const upload = multer({
   storage,
   limits: { fileSize: 5 * 1024 * 1024 },
   fileFilter: (req, file, cb) => {
-    if (/^image\/(jpe?g|png|webp|gif)$/i.test(file.mimetype)) cb(null, true);
+    if (/^image\/(jpe?g|png|webp|gif)\$/i.test(file.mimetype)) cb(null, true);
     else cb(new Error('Only JPG / PNG / WEBP / GIF images are allowed'));
   }
 });
@@ -68,10 +69,6 @@ const requireAdmin = (req, res, next) => {
     return res.status(401).json({ error: 'Unauthorized — admin token missing or invalid' });
   next();
 };
-const path = require('path');
-
-app.use(express.static(path.join(__dirname, 'public')));
-
 
 app.get('/api/products', (req, res) => {
   const db = readDB();
@@ -120,7 +117,6 @@ app.delete('/api/products/:id', requireAdmin, (req, res) => {
   writeDB(db);
   res.json({ message: 'Product deleted' });
 });
-
 
 app.post('/api/orders', (req, res) => {
   const { name, phone, address, city, items } = req.body;
@@ -172,21 +168,10 @@ app.delete('/api/orders/:id', requireAdmin, (req, res) => {
   res.json({ message: 'Order removed' });
 });
 
-
 app.post('/api/admin/login', (req, res) => {
   if (req.body.password === ADMIN_PASSWORD)
     return res.json({ token: ADMIN_PASSWORD, message: 'Welcome back, Sheikh!' });
   res.status(401).json({ error: 'Incorrect password' });
 });
 
-// const PORT = process.env.PORT || 3000;
-// app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
-
-
-
-const PORT = process.env.PORT || 8000;
-app.listen(PORT, () => {
-    console.log(`Server running successfully on: http://localhost:${PORT}`);
-});
-
-
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
